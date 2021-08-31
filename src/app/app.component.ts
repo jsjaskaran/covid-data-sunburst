@@ -49,22 +49,17 @@ export class AppComponent {
 
           itemInfo['children'].push({
             name: 'Total Cases',
-            value: item.cases
-          })
-
-          itemInfo['children'].push({
-            name: 'Recovered',
-            value: item.recovered
-          })
-
-          itemInfo['children'].push({
-            name: 'Deaths',
-            value: item.deaths
-          })
-
-          itemInfo['children'].push({
-            name: 'Active',
-            value: item.active
+            // value: item.cases
+            children: [{
+              name: 'Recovered',
+              value: item.recovered
+            }, {
+              name: 'Deaths',
+              value: item.deaths
+            }, {
+              name: 'Active',
+              value: item.active
+            }]
           })
 
           chartData.push(itemInfo);
